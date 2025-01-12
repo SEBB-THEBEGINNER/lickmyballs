@@ -1,0 +1,126 @@
+-- Feel free to modify, contact pystyt on discord if u want to show me the modifications you did to the script, thanks alot
+-- Detect R6 or R15
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local isR6 = character:FindFirstChild("Torso") ~= nil
+
+-- Sebblib Notification
+local function showNotification(message)
+    Sebblib:Notify({
+        Title = "Notification",
+        Description = message .. " | by pyst",
+        Duration = 5,
+        Icon = "rbxassetid://6031095860" -- Optional: Notification Icon
+    })
+end
+
+-- Show notification based on rig type
+if isR6 then
+    showNotification("R6 detected")
+else
+    showNotification("R15 detected")
+end
+
+-- Create Sebblib GUI
+local gui = Sebblib:CreateWindow({
+    Title = "BangGui",
+    Size = UDim2.new(0, 300, 0, 300),
+    Position = UDim2.new(0.5, -150, 0.5, -150),
+    Draggable = true,
+    Resizable = false
+})
+
+-- Main Frame
+local mainFrame = gui:CreateFrame({
+    Size = UDim2.new(0, 300, 0, 300),
+    BackgroundColor3 = Color3.fromRGB(40, 40, 40),
+    BorderSizePixel = 0,
+    UICornerRadius = UDim.new(0, 20)
+})
+
+-- Title
+mainFrame:CreateTextLabel({
+    Text = "Choose",
+    Size = UDim2.new(1, -60, 0, 30),
+    Position = UDim2.new(0, 10, 0, 0),
+    TextColor3 = Color3.fromRGB(255, 255, 255),
+    Font = Enum.Font.SourceSansSemibold,
+    TextSize = 24,
+    TextXAlignment = Enum.TextXAlignment.Left
+})
+
+-- Close Button
+local closeButton = mainFrame:CreateTextButton({
+    Text = "X",
+    Size = UDim2.new(0, 30, 0, 30),
+    Position = UDim2.new(1, -40, 0, 0),
+    BackgroundColor3 = Color3.fromRGB(255, 50, 50),
+    TextColor3 = Color3.fromRGB(255, 255, 255),
+    Font = Enum.Font.SourceSansBold,
+    TextSize = 20
+})
+
+closeButton.MouseButton1Click:Connect(function()
+    gui:Destroy()
+end)
+
+-- Minimize Button
+local minimizeButton = mainFrame:CreateTextButton({
+    Text = "-",
+    Size = UDim2.new(0, 30, 0, 30),
+    Position = UDim2.new(1, -80, 0, 0),
+    BackgroundColor3 = Color3.fromRGB(255, 165, 0),
+    TextColor3 = Color3.fromRGB(255, 255, 255),
+    Font = Enum.Font.SourceSansBold,
+    TextSize = 20
+})
+
+local minimized = false
+minimizeButton.MouseButton1Click:Connect(function()
+    minimized = not minimized
+    if minimized then
+        mainFrame:TweenSize(UDim2.new(0, 300, 0, 30), Enum.EasingDirection.In, Enum.EasingStyle.Quint, 0.5)
+    else
+        mainFrame:TweenSize(UDim2.new(0, 300, 0, 300), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.5)
+    end
+end)
+
+-- Scrolling Frame
+local scrollingFrame = mainFrame:CreateScrollingFrame({
+    Size = UDim2.new(1, -20, 1, -50),
+    Position = UDim2.new(0, 10, 0, 40),
+    ScrollBarThickness = 6
+})
+
+local layout = scrollingFrame:CreateLayout({
+    Padding = UDim.new(0, 10),
+    HorizontalAlignment = Enum.HorizontalAlignment.Center
+})
+
+-- Buttons Data
+local buttons = {
+    {name = "Bang V2", r6 = "https://pastebin.com/raw/aPSHMV6K", r15 = "https://pastebin.com/raw/1ePMTt9n"},
+    {name = "Get Banged", r6 = "https://pastebin.com/raw/zHbw7ND1", r15 = "https://pastebin.com/raw/7hvcjDnW"},
+    {name = "Suck", r6 = "https://pastebin.com/raw/SymCfnAW", r15 = "https://pastebin.com/raw/p8yxRfr4"},
+    {name = "Get Suc", r6 = "https://pastebin.com/raw/FPu4e2Qh", r15 = "https://pastebin.com/raw/DyPP2tAF"},
+    {name = "Jerk", r6 = "https://pastefy.app/wa3v2Vgm/raw", r15 = "https://pastefy.app/YZoglOyJ/raw"}
+}
+
+for _, buttonData in pairs(buttons) do
+    local button = scrollingFrame:CreateTextButton({
+        Text = buttonData.name,
+        Size = UDim2.new(0.8, 0, 0, 40),
+        BackgroundColor3 = Color3.fromRGB(50, 150, 255),
+        TextColor3 = Color3.fromRGB(255, 255, 255),
+        Font = Enum.Font.SourceSansBold,
+        TextSize = 20
+    })
+
+    button.MouseButton1Click:Connect(function()
+        if isR6 then
+            loadstring(game:HttpGet(buttonData.r6))()
+        else
+            loadstring(game:HttpGet(buttonData.r15))()
+        end
+    end)
+end
