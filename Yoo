@@ -1,0 +1,383 @@
+-- Farewell Infortality.
+-- Version: 2.82
+-- Instances:
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local Login = Instance.new("Frame")
+local Login_2 = Instance.new("TextLabel")
+local Cred3 = Instance.new("TextLabel")
+local Cred2 = Instance.new("TextLabel")
+local Username = Instance.new("TextBox")
+local Submit = Instance.new("TextButton")
+local Password = Instance.new("TextBox")
+local Cred2_2 = Instance.new("TextLabel")
+local TopBar = Instance.new("ImageLabel")
+local Sidebar = Instance.new("ImageLabel")
+local x = Instance.new("TextButton")
+local loginfailed = Instance.new("Frame")
+local failed = Instance.new("ImageLabel")
+local ok = Instance.new("TextButton")
+local UI = Instance.new("Frame")
+local Border = Instance.new("TextLabel")
+local Border_2 = Instance.new("TextLabel")
+local Border_3 = Instance.new("TextLabel")
+local Open = Instance.new("TextButton")
+local Execute = Instance.new("TextButton")
+local Clear = Instance.new("TextButton")
+local TextField = Instance.new("TextBox")
+local x_2 = Instance.new("TextButton")
+local Sidebar_2 = Instance.new("ImageLabel")
+local Border_4 = Instance.new("TextLabel")
+local RoXploit = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+--Properties:
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.new(1, 0.588235, 0.290196)
+Frame.Position = UDim2.new(0.0413026363, 0, 0.693154037, 0)
+Frame.Size = UDim2.new(0, 188, 0, 102)
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.new(1, 0.760784, 0.278431)
+TextButton.Position = UDim2.new(0, 0, 0.901185751, 0)
+TextButton.Size = UDim2.new(0, 188, 0, 25)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.TextColor3 = Color3.new(0, 0, 0)
+TextButton.TextSize = 14
+
+Login.Name = "Login"
+Login.Parent = ScreenGui
+Login.Active = true
+Login.BackgroundColor3 = Color3.new(0, 0.282353, 0.415686)
+Login.Draggable = true
+Login.Position = UDim2.new(0, 400, 0, 200)
+Login.Size = UDim2.new(0, 343, 0, 350)
+Login.Visible = false
+
+Login_2.Name = "Login"
+Login_2.Parent = Login
+Login_2.BackgroundColor3 = Color3.new(1, 1, 1)
+Login_2.BackgroundTransparency = 1
+Login_2.Position = UDim2.new(0, 73, 0, 80)
+Login_2.Size = UDim2.new(0, 200, 0, 50)
+Login_2.Font = Enum.Font.SourceSansBold
+Login_2.Text = "LOGIN"
+Login_2.TextColor3 = Color3.new(0, 0.207843, 0.298039)
+Login_2.TextSize = 60
+
+Cred3.Name = "Cred3"
+Cred3.Parent = Login
+Cred3.BackgroundColor3 = Color3.new(1, 1, 1)
+Cred3.BackgroundTransparency = 1
+Cred3.Position = UDim2.new(0, 73, 0, 310)
+Cred3.Size = UDim2.new(0, 200, 0, 50)
+Cred3.Font = Enum.Font.SourceSansBold
+Cred3.Text = "GFX Help: Mannequin"
+Cred3.TextColor3 = Color3.new(0, 0.419608, 0.584314)
+Cred3.TextSize = 14
+
+Cred2.Name = "Cred2"
+Cred2.Parent = Login
+Cred2.BackgroundColor3 = Color3.new(1, 1, 1)
+Cred2.BackgroundTransparency = 1
+Cred2.Position = UDim2.new(0, 73, 0, 270)
+Cred2.Size = UDim2.new(0, 200, 0, 50)
+Cred2.Font = Enum.Font.SourceSansBold
+Cred2.Text = "Lead Coder: SnakeCyclops"
+Cred2.TextColor3 = Color3.new(0, 0.419608, 0.584314)
+Cred2.TextSize = 14
+
+Username.Name = "Username"
+Username.Parent = Login
+Username.BackgroundColor3 = Color3.new(0, 0.211765, 0.301961)
+Username.BorderColor3 = Color3.new(0, 0.211765, 0.301961)
+Username.BorderSizePixel = 7
+Username.Position = UDim2.new(0, 90, 0, 137)
+Username.Size = UDim2.new(0, 170, 0, 15)
+Username.Font = Enum.Font.SourceSansBold
+Username.Text = "Username"
+Username.TextColor3 = Color3.new(0, 0.419608, 0.584314)
+Username.TextSize = 24
+
+Submit.Name = "Submit"
+Submit.Parent = Login
+Submit.BackgroundColor3 = Color3.new(0, 0.258824, 0.364706)
+Submit.BorderColor3 = Color3.new(0, 0.419608, 0.584314)
+Submit.Position = UDim2.new(0, 123, 0, 205)
+Submit.Size = UDim2.new(0, 105, 0, 20)
+Submit.Font = Enum.Font.SourceSansBold
+Submit.Text = "Submit"
+Submit.TextColor3 = Color3.new(0, 0.419608, 0.584314)
+Submit.TextSize = 14
+
+Password.Name = "Password"
+Password.Parent = Login
+Password.BackgroundColor3 = Color3.new(0, 0.211765, 0.301961)
+Password.BorderColor3 = Color3.new(0, 0.211765, 0.301961)
+Password.BorderSizePixel = 7
+Password.Position = UDim2.new(0, 90, 0, 173)
+Password.Size = UDim2.new(0, 170, 0, 15)
+Password.Font = Enum.Font.SourceSansBold
+Password.Text = "Password"
+Password.TextColor3 = Color3.new(0, 0.419608, 0.584314)
+Password.TextSize = 24
+
+Cred2_2.Name = "Cred2"
+Cred2_2.Parent = Login
+Cred2_2.BackgroundColor3 = Color3.new(1, 1, 1)
+Cred2_2.BackgroundTransparency = 1
+Cred2_2.Position = UDim2.new(0, 73, 0, 290)
+Cred2_2.Size = UDim2.new(0, 200, 0, 50)
+Cred2_2.Font = Enum.Font.SourceSansBold
+Cred2_2.Text = "Lead GFX: KrystalTeam."
+Cred2_2.TextColor3 = Color3.new(0, 0.419608, 0.584314)
+Cred2_2.TextSize = 14
+
+TopBar.Name = "TopBar"
+TopBar.Parent = Login
+TopBar.BackgroundColor3 = Color3.new(1, 1, 1)
+TopBar.Size = UDim2.new(0, 345, 0, 25)
+TopBar.ZIndex = 3
+TopBar.Image = "rbxgameasset://Images/3f54076b9b9b22aa79a756f339245b83"
+
+Sidebar.Name = "Sidebar"
+Sidebar.Parent = Login
+Sidebar.BackgroundColor3 = Color3.new(1, 1, 1)
+Sidebar.Position = UDim2.new(0, 304, 0, 25)
+Sidebar.Size = UDim2.new(0, 40, 0, 325)
+Sidebar.ZIndex = 2
+Sidebar.Image = "rbxgameasset://Images/xds"
+
+x.Name = "x"
+x.Parent = Login
+x.BackgroundColor3 = Color3.new(1, 1, 1)
+x.BackgroundTransparency = 1
+x.Position = UDim2.new(0, 322, 0, 0)
+x.Size = UDim2.new(0, 25, 0, 25)
+x.ZIndex = 4
+x.Font = Enum.Font.SourceSans
+x.Text = ""
+x.TextSize = 14
+
+loginfailed.Name = "loginfailed"
+loginfailed.Parent = Login
+loginfailed.BackgroundColor3 = Color3.new(1, 1, 1)
+loginfailed.BackgroundTransparency = 1
+loginfailed.Position = UDim2.new(0, 80, 0, 100)
+loginfailed.Size = UDim2.new(0, 215, 0, 160)
+loginfailed.Visible = false
+loginfailed.ZIndex = 10
+
+failed.Name = "failed"
+failed.Parent = loginfailed
+failed.BackgroundColor3 = Color3.new(1, 1, 1)
+failed.Size = UDim2.new(0, 215, 0, 160)
+failed.ZIndex = 5
+failed.Image = "rbxgameasset://Images/loginfailed"
+
+ok.Name = "ok"
+ok.Parent = loginfailed
+ok.BackgroundColor3 = Color3.new(1, 1, 1)
+ok.BackgroundTransparency = 1
+ok.Position = UDim2.new(0, 115, 0, 120)
+ok.Size = UDim2.new(0, 90, 0, 30)
+ok.ZIndex = 5
+ok.Font = Enum.Font.SourceSans
+ok.Text = ""
+ok.TextSize = 14
+
+UI.Name = "UI"
+UI.Parent = ScreenGui
+UI.Active = true
+UI.BackgroundColor3 = Color3.new(1, 0.286275, 0.870588)
+UI.Draggable = true
+UI.Position = UDim2.new(0, 406, 0, 195)
+UI.Size = UDim2.new(0, 343, 0, 350)
+
+Border.Name = "Border"
+Border.Parent = UI
+Border.BackgroundColor3 = Color3.new(0, 0.211765, 0.301961)
+Border.Position = UDim2.new(0, 304, 0, 0)
+Border.Size = UDim2.new(0, -304, 0, 30)
+Border.Font = Enum.Font.SourceSans
+Border.TextSize = 14
+
+Border_2.Name = "Border"
+Border_2.Parent = UI
+Border_2.BackgroundColor3 = Color3.new(0, 0.211765, 0.301961)
+Border_2.Position = UDim2.new(0, 10, 0, 0)
+Border_2.Selectable = true
+Border_2.Size = UDim2.new(0, -10, 0, 350)
+Border_2.Font = Enum.Font.SourceSans
+Border_2.Text = ""
+Border_2.TextSize = 14
+
+Border_3.Name = "Border"
+Border_3.Parent = UI
+Border_3.BackgroundColor3 = Color3.new(0, 0.211765, 0.301961)
+Border_3.Position = UDim2.new(0, 10, 0, 350)
+Border_3.Selectable = true
+Border_3.Size = UDim2.new(0.899999976, 0, 0, -5)
+Border_3.Font = Enum.Font.SourceSans
+Border_3.TextSize = 14
+
+Open.Name = "Open"
+Open.Parent = UI
+Open.BackgroundColor3 = Color3.new(0, 0.211765, 0.301961)
+Open.Position = UDim2.new(0, 10, 0, 270)
+Open.Size = UDim2.new(0, 100, 0, 25)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open"
+Open.TextColor3 = Color3.new(0, 0.419608, 0.584314)
+Open.TextSize = 14
+
+Execute.Name = "Execute"
+Execute.Parent = UI
+Execute.BackgroundColor3 = Color3.new(0, 0.211765, 0.301961)
+Execute.Position = UDim2.new(0, 112, 0, 270)
+Execute.Size = UDim2.new(0, 100, 0, 25)
+Execute.Font = Enum.Font.SourceSans
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.new(0, 0.419608, 0.584314)
+Execute.TextSize = 14
+
+Clear.Name = "Clear"
+Clear.Parent = UI
+Clear.BackgroundColor3 = Color3.new(0, 0.211765, 0.301961)
+Clear.Position = UDim2.new(0, 204, 0, 270)
+Clear.Size = UDim2.new(0, 100, 0, 25)
+Clear.Font = Enum.Font.SourceSans
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.new(0, 0.419608, 0.584314)
+Clear.TextSize = 14
+
+TextField.Name = "TextField"
+TextField.Parent = UI
+TextField.BackgroundColor3 = Color3.new(1, 1, 1)
+TextField.BackgroundTransparency = 1
+TextField.Position = UDim2.new(0, 15, 0, 33)
+TextField.Size = UDim2.new(0, 285, 0, 233)
+TextField.ClearTextOnFocus = false
+TextField.Font = Enum.Font.SourceSans
+TextField.MultiLine = true
+TextField.Text = "print(\"Hello World!\")"
+TextField.TextSize = 14
+TextField.TextXAlignment = Enum.TextXAlignment.Left
+TextField.TextYAlignment = Enum.TextYAlignment.Top
+
+x_2.Name = "x"
+x_2.Parent = UI
+x_2.BackgroundColor3 = Color3.new(1, 1, 1)
+x_2.BackgroundTransparency = 1
+x_2.Position = UDim2.new(0, 322, 0, 0)
+x_2.Size = UDim2.new(0, 25, 0, 25)
+x_2.ZIndex = 4
+x_2.Font = Enum.Font.SourceSans
+x_2.Text = ""
+x_2.TextSize = 14
+
+Sidebar_2.Name = "Sidebar"
+Sidebar_2.Parent = UI
+Sidebar_2.BackgroundColor3 = Color3.new(0.239216, 0.215686, 1)
+Sidebar_2.Position = UDim2.new(0, 304, 0, 30)
+Sidebar_2.Size = UDim2.new(0, 40, 0, 312)
+Sidebar_2.ZIndex = 4
+Sidebar_2.Image = "rbxgameasset://Images/]]sddddddddddd"
+
+Border_4.Name = "Border"
+Border_4.Parent = UI
+Border_4.BackgroundColor3 = Color3.new(0, 0.211765, 0.301961)
+Border_4.Position = UDim2.new(0, 304, 0, 0)
+Border_4.Size = UDim2.new(0, 40, 0, 350)
+Border_4.Font = Enum.Font.SourceSans
+Border_4.TextSize = 14
+
+RoXploit.Name = "Ro-Xploit"
+RoXploit.Parent = UI
+RoXploit.BackgroundColor3 = Color3.new(1, 1, 1)
+RoXploit.BackgroundTransparency = 1
+RoXploit.Position = UDim2.new(0, 310, 0, 250)
+RoXploit.Size = UDim2.new(0, 25, 0, 50)
+RoXploit.ZIndex = 10
+RoXploit.Font = Enum.Font.SourceSans
+RoXploit.Text = ""
+RoXploit.TextSize = 14
+
+TextLabel.Parent = UI
+TextLabel.BackgroundColor3 = Color3.new(1, 0.0901961, 0.607843)
+TextLabel.Size = UDim2.new(0, 343, 0, 30)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Webhacks"
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+TextLabel.TextSize = 14
+-- Scripts:
+function SCRIPT_ICQK79_FAKESCRIPT() -- Submit.Script 
+	getfenv().script = Instance.new('Script', Submit)
+
+	--Made by Internal, Edited by sigma -- 
+	
+	Host = script.Parent.Parent.Parent.Parent --DO NOT EDIT
+	
+	Main = Host.RC7.Login --DO NOT EDIT
+	
+	Enforce = Main.Submit --DO NOT EDIT
+	
+	Client = Main.Username --DO NOT EDIT
+	
+	Client2 = Main.Password -- DO NOT EDIT
+	
+	w0rd = 1 -- Time it takes to change text
+	function Passw0rdChecker()
+		if Client.Text == "RC7" and Client2.Text == "RC7" then --The passw0rd is Roblox change it to what you want
+		 Main.Parent:FindFirstChild("UI").Visible = true
+		script.Parent.Parent.Visible = false
+		else
+		Main:FindFirstChild("loginfailed").Visible = true
+	end
+	end
+	
+	Enforce.MouseButton1Down:connect(Passw0rdChecker)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_ICQK79_FAKESCRIPT))
+function SCRIPT_LILH87_FAKESCRIPT() -- Login.Close 
+	getfenv().script = Instance.new('Script', Login)
+
+	script.Parent:FindFirstChild("x").MouseButton1Down:connect(function()
+	script.Parent.Visible = false
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_LILH87_FAKESCRIPT))
+function SCRIPT_VMXO90_FAKESCRIPT() -- ok.ok 
+	getfenv().script = Instance.new('Script', ok)
+
+	script.Parent.MouseButton1Down:connect(function()
+	script.Parent.Parent.Visible = false
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_VMXO90_FAKESCRIPT))
+function SCRIPT_MSRW71_FAKESCRIPT() -- UI.Source 
+	getfenv().script = Instance.new('Script', UI)
+
+	script.Parent:FindFirstChild("Execute").MouseButton1Down:connect(function()
+	loadstring(script.Parent:FindFirstChild("TextField").Text)()
+	end)
+	
+	script.Parent:FindFirstChild("Clear").MouseButton1Down:connect(function()
+	script.Parent:FindFirstChild("TextField").Text = ""
+	end)
+	
+	script.Parent:FindFirstChild("Open").MouseButton1Down:connect(function()
+	warn("A player attempted to use the Open button, the feature is not implemented yet!")
+	end)
+	
+	script.Parent:FindFirstChild("Ro-Xploit").MouseButton1Down:connect(function()
+	game:GetObjects("rbxassetid://364364477")[1].Source()
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_MSRW71_FAKESCRIPT))
