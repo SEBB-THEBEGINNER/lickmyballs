@@ -1,0 +1,257 @@
+-- Load OrionLib library
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+-- Create the Window
+local Window = OrionLib:MakeWindow({
+    Name = "BASIC SCRIPT'S", 
+    HidePremium = false, 
+    SaveConfig = true, 
+    ConfigFolder = "OrionTest"
+})
+
+-- Create the first tab (Tools)
+local ToolsTab = Window:MakeTab({
+    Name = "TOOLS",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Tools Tab Buttons
+ToolsTab:AddButton({
+    Name = "Fly",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+    end
+})
+
+ToolsTab:AddButton({
+    Name = "Big hitbox",
+    Callback = function()
+        loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Update-script-hitbox-9326"))()
+    end
+})
+
+ToolsTab:AddButton({
+    Name = "Inf jumps",
+    Callback = function()
+        local InfiniteJumpEnabled = true
+        game:GetService("UserInputService").JumpRequest:connect(function()
+            if InfiniteJumpEnabled then
+                game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+            end
+        end)
+    end
+})
+
+ToolsTab:AddButton({
+    Name = "Inf yield",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+    end
+})
+
+ToolsTab:AddButton({
+    Name = "ESP",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
+    end
+})
+
+ToolsTab:AddButton({
+    Name = "Fe Emotes",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/eCpipCTH"))()
+    end
+})
+
+ToolsTab:AddButton({
+    Name = "Universal Remove Surface Textures and Effects",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SEBB-THEBEGINNER/Sebb-Fanmade-Update-for-Basic-PvP/refs/heads/main/Universal%20Remove%20Surface%20Textures%20and%20Effects"))()
+    end
+})
+
+ToolsTab:AddButton({
+    Name = "Invisible V2",
+    Callback = function()
+        loadstring(game:HttpGet('https://abre.ai/invisible-v2'))()
+    end
+})
+
+ToolsTab:AddButton({
+    Name = "1000+ GUI",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SEBB-THEBEGINNER/Sebb-Fanmade-Update-for-Basic-PvP/refs/heads/main/testing"))()
+    end
+})
+
+ToolsTab:AddButton({
+    Name = "Trolling",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/kigredns/SanderXV4.2.2/refs/heads/main/New.lua'))() 
+    end
+})
+
+ToolsTab:AddButton({
+    Name = "Aimbot V2",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/yzeedw/Mortalv2-main/main/UNIVERSAL%20AIMBOT%20V2"))()
+    end
+})
+
+ToolsTab:AddButton({
+    Name = "Keyboard",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))() 
+    end
+})
+
+-- Additional buttons added to ToolsTab
+ToolsTab:AddButton({
+    Name = "FE Universal Tools/Gears Giver",
+    Callback = function()
+        loadstring(game:HttpGet(('https://pastefy.app/VYIAk3o1/raw'),true))()
+    end
+})
+
+ToolsTab:AddButton({
+    Name = "Click To Tp",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SEBB-THEBEGINNER/lickmyballs/refs/heads/main/CTOTP"))()
+    end
+})
+
+-- Create the second tab (SUS)
+local SUSTab = Window:MakeTab({
+    Name = "SUS",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- SUS Tab Buttons
+SUSTab:AddButton({
+    Name = "Bang V2",
+    Callback = function()
+        local characterModel = game.Players.LocalPlayer.Character
+        if characterModel and characterModel:FindFirstChild("Humanoid") then
+            if characterModel.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                loadstring(game:HttpGet("https://pastebin.com/raw/aPSHMV6K"))()
+            elseif characterModel.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+                loadstring(game:HttpGet("https://pastebin.com/raw/1ePMTt9n"))()
+            end
+        end
+    end
+})
+
+SUSTab:AddButton({
+    Name = "Get Banged",
+    Callback = function()
+        local characterModel = game.Players.LocalPlayer.Character
+        if characterModel and characterModel:FindFirstChild("Humanoid") then
+            if characterModel.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                loadstring(game:HttpGet("https://pastebin.com/raw/zHbw7ND1"))()
+            elseif characterModel.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+                loadstring(game:HttpGet("https://pastebin.com/raw/7hvcjDnW"))()
+            end
+        end
+    end
+})
+
+SUSTab:AddButton({
+    Name = "Suck",
+    Callback = function()
+        local characterModel = game.Players.LocalPlayer.Character
+        if characterModel and characterModel:FindFirstChild("Humanoid") then
+            if characterModel.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                loadstring(game:HttpGet("https://pastebin.com/raw/SymCfnAW"))()
+            elseif characterModel.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+                loadstring(game:HttpGet("https://pastebin.com/raw/p8yxRfr4"))()
+            end
+        end
+    end
+})
+
+SUSTab:AddButton({
+    Name = "Get Suc",
+    Callback = function()
+        local characterModel = game.Players.LocalPlayer.Character
+        if characterModel and characterModel:FindFirstChild("Humanoid") then
+            if characterModel.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                loadstring(game:HttpGet("https://pastebin.com/raw/FPu4e2Qh"))()
+            elseif characterModel.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+                loadstring(game:HttpGet("https://pastebin.com/raw/DyPP2tAF"))()
+            end
+        end
+    end
+})
+
+SUSTab:AddButton({
+    Name = "Jerk",
+    Callback = function()
+        local characterModel = game.Players.LocalPlayer.Character
+        if characterModel and characterModel:FindFirstChild("Humanoid") then
+            if characterModel.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                loadstring(game:HttpGet("https://pastefy.app/wa3v2Vgm/raw"))()
+            elseif characterModel.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+                loadstring(game:HttpGet("https://pastefy.app/YZoglOyJ/raw"))()
+            end
+        end
+    end
+})
+
+-- Create the third tab (Info)
+local InfoTab = Window:MakeTab({
+    Name = "INFO",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Info Tab Buttons
+InfoTab:AddButton({
+    Name = "Sebb - The Creator",
+    Callback = function()
+        print("Creator: Sebb")
+    end
+})
+
+InfoTab:AddButton({
+    Name = "Current version: 1.5",
+    Callback = function()
+        print("Version: 1.5")
+    end
+})
+
+InfoTab:AddButton({
+    Name = "YouTube: Sebb",
+    Callback = function()
+        local link = "https://youtube.com/@sebb-k9x?si=NuMivqb0pfgxOs4o"
+        if setclipboard then
+            setclipboard(link) -- For PC
+        else
+            game:GetService("StarterGui"):SetCore("SendNotification", {
+                Title = "Copied!",
+                Text = "The YouTube link has been copied to your clipboard.",
+                Duration = 5
+            })
+        end
+    end
+})
+
+InfoTab:AddButton({
+    Name = "Discord: SEBB RBLX COMMUNITY",
+    Callback = function()
+        local link = "https://discord.gg/WH8Z7m2yuu"
+        if setclipboard then
+            setclipboard(link) -- For PC
+        else
+            game:GetService("StarterGui"):SetCore("SendNotification", {
+                Title = "Copied!",
+                Text = "The Discord Invite has been copied to your clipboard.",
+                Duration = 5
+            })
+        end
+    end
+})
+
+-- Initialize the library
+OrionLib:Init()
